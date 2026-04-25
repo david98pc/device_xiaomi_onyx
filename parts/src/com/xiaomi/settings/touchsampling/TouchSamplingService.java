@@ -85,7 +85,7 @@ public class TouchSamplingService extends Service {
         SharedPreferences sharedPref = getSharedPreferences(
                 TouchSamplingSettingsFragment.SHAREDHTSR, Context.MODE_PRIVATE);
         boolean htsrEnabled = sharedPref.getBoolean(TouchSamplingSettingsFragment.HTSR_STATE, false);
-        int state = htsrEnabled ? 240 : 120;
+        int state = htsrEnabled ? 480 : 120;
 
         String currentState = FileUtils.readOneLine(TouchSamplingUtils.HTSR_FILE);
         if (currentState == null || !currentState.equals(Integer.toString(state))) {
